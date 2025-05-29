@@ -9,7 +9,7 @@ namespace eroxia.model
     internal class Purchase
     {
 
-        public int IdPurchase { get; set; } 
+        public int IdPurchase { get; set; }
         public Client Client { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime? ExpeditionDate { get; set; }

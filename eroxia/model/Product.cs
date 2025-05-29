@@ -23,5 +23,16 @@ namespace eroxia.model
             Manufacturer = manufacturer;
             Price = price;
         }
+        public Product(string name, string manufacturer, decimal price)
+        {
+            Name = name;
+            Manufacturer = manufacturer;
+            Price = price;
+        }
+
+        public override string ToString()
+        {
+            return $"{IdProduct} - {Name} - {Manufacturer} - {Price}";
+        }
     }
 }

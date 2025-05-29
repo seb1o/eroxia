@@ -6,14 +6,20 @@ using System.Threading.Tasks;
 
 namespace eroxia.model
 {
-    internal class Client: Person
-    {  
+    internal class Client : Person
+    {
         public Employee? Employee { get; set; } // reference, come foreign key
         public string Address { get; set; }
+        public string? FiscalCodeEmployee { get; set; }
 
-        public Client(string fiscalCode, string name, string surname, string address): base(fiscalCode, name, surname)
+        public Client(string fiscalCode, string name, string surname, string address) : base(fiscalCode, name, surname)
         {
             Address = address;
+        }
+
+        public override string ToString()
+        {
+            return $"{FiscalCode} - {Name} {Surname} - {Address} - {FiscalCodeEmployee} - {Employee?.Name}";
         }
     }
 }
